@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hl4350hb.inspirationapp.MainActivity"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+    android:layout_marginTop="5dp">
+
+    <EditText
+        android:id="@+id/noteEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:visibility="gone"
+        android:hint="Enter a note here about your amazing pic!"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:visibility="gone"
+        android:id="@+id/hashTagEntry"
+        android:hint="Add Hashtag(s) to your pic!"
+        android:layout_below="@id/noteEntry"
+        />
+
+    <ListView
+        android:id="@+id/picList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hashTagEntry"
+        />
+
+    <ImageView
+        android:id="@+id/newPicture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+
+
+    <Button
+        android:id="@+id/picButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take Picture"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_button"
+        android:text="Save New Pic"
+        android:layout_above="@id/picButton"
+        android:visibility="gone"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_route_button"
+        android:text="Search"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
